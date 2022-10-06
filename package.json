@@ -4,7 +4,8 @@
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+	"static-build": "next build && next export -o build/static"
   },
   "dependencies": {
     "@types/node": "^18.6.3",
