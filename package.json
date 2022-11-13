@@ -5,13 +5,15 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-	"static-build": "next build && next export -o build/static"
+    "static-build": "next build && next export -o build/static"
   },
   "dependencies": {
+    "@nextui-org/react": "^1.0.0-beta.10",
     "@types/node": "^18.6.3",
     "@types/react": "^18.0.15",
     "@types/react-dom": "^18.0.6",
     "classnames": "^2.3.1",
+    "daisyui": "^2.36.1",
     "date-fns": "^2.28.0",
     "next": "latest",
     "react": "^18.2.0",
