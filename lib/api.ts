@@ -28,13 +28,14 @@ async function fetchAPI(query = "", { variables }: Record<string, any> = {}) {
 export async function getPreviewPost(id, idType = "DATABASE_ID") {
 	const data = await fetchAPI(
 		`
-    query PreviewPost($id: ID!, $idType: PostIdType!) {
+	query PreviewPost($id: ID!, $idType: PostIdType!) {
       post(id: $id, idType: $idType) {
         databaseId
         slug
         status
       }
-    }`,
+    }
+	`,
 		{
 			variables: { id, idType },
 		}
