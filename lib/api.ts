@@ -42,6 +42,22 @@ export async function getPreviewPost(id, idType = "DATABASE_ID") {
 	return data.post;
 }
 
+export async function getMainMenu() {
+	const data = await fetchAPI(`
+	{
+		menuItems(where: {location: MAIN_NAVIGATION}) {
+		  edges {
+			node {
+			  id
+			  label
+			}
+		  }
+		}
+	  }
+	`);
+	return data?.menuItems;
+}
+
 export async function getAllPostsWithSlug() {
 	const data = await fetchAPI(`
     {
